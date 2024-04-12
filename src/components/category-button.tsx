@@ -19,7 +19,7 @@ export function CategoryButton({
       )}
       {...props}
     >
-      <Text className="text-slate-100 font-subtitle text-sm">{title}</Text>
+      <Text className="text-slate-100 font-medium text-sm">{title}</Text>
     </Pressable>
   );
 }

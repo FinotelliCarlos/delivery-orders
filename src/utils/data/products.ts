@@ -8,8 +8,8 @@ const MENU = [
         price: 21.5,
         description:
           "Um suculento hambúrguer de frango grelhado, acompanhado de alface, tomate e molho especial.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-1.png"),
+        thumbnail: require("@/assets/products/thumbnail-1.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Frango",
@@ -24,8 +24,8 @@ const MENU = [
         price: 26.9,
         description:
           "Um hambúrguer suculento com carne angus, queijo cheddar derretido, bacon crocante e cebola caramelizada.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-2.png"),
+        thumbnail: require("@/assets/products/thumbnail-2.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne Angus",
@@ -41,8 +41,8 @@ const MENU = [
         price: 23.5,
         description:
           "Um sanduíche gourmet com presunto parma, queijo brie, rúcula e tomate seco em pão ciabatta.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-3.png"),
+        thumbnail: require("@/assets/products/thumbnail-3.png"),
         ingredientes: [
           "Pão ciabatta",
           "Presunto Parma",
@@ -51,15 +51,14 @@ const MENU = [
           "Tomate seco",
         ],
       },
-
       {
         id: "6",
         title: "Lanche Mexicano",
         price: 20.9,
         description:
           "Um hambúrguer com inspiração mexicana, recheado com chilli, queijo picante, guacamole e nachos crocantes.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-6.png"),
+        thumbnail: require("@/assets/products/thumbnail-6.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Chilli",
@@ -79,8 +78,8 @@ const MENU = [
         price: 21.5,
         description:
           "Um suculento hambúrguer de frango grelhado, acompanhado de alface, tomate e molho especial.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-1.png"),
+        thumbnail: require("@/assets/products/thumbnail-1.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Frango",
@@ -95,8 +94,8 @@ const MENU = [
         price: 26.9,
         description:
           "Um hambúrguer suculento com carne angus, queijo cheddar derretido, bacon crocante e cebola caramelizada.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-2.png"),
+        thumbnail: require("@/assets/products/thumbnail-2.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne Angus",
@@ -111,8 +110,8 @@ const MENU = [
         price: 23.5,
         description:
           "Um sanduíche gourmet com presunto parma, queijo brie, rúcula e tomate seco em pão ciabatta.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-3.png"),
+        thumbnail: require("@/assets/products/thumbnail-3.png"),
         ingredientes: [
           "Pão ciabatta",
           "Presunto Parma",
@@ -127,8 +126,8 @@ const MENU = [
         price: 19.9,
         description:
           "Um lanche vegano delicioso com hambúrguer de grão de bico, abobrinha grelhada, cebola caramelizada e molho especial.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-4.png"),
+        thumbnail: require("@/assets/products/thumbnail-4.png"),
         ingredientes: [
           "Pão de hambúrguer vegano",
           "Hambúrguer de grão de bico",
@@ -143,8 +142,8 @@ const MENU = [
         price: 22.5,
         description:
           "Um hambúrguer clássico americano com carne grelhada, queijo americano, alface, tomate e molho de mostarda e ketchup.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-5.png"),
+        thumbnail: require("@/assets/products/thumbnail-5.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne grelhada",
@@ -161,8 +160,8 @@ const MENU = [
         price: 20.9,
         description:
           "Um hambúrguer com inspiração mexicana, recheado com chilli, queijo picante, guacamole e nachos crocantes.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-6.png"),
+        thumbnail: require("@/assets/products/thumbnail-6.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Chilli",
@@ -177,13 +176,13 @@ const MENU = [
     title: "Hambúrgueres Clássicos",
     data: [
       {
-        id: "1",
+        id: "7",
         title: "Hambúrguer Cheese",
         price: 18.9,
         description:
           "Um hambúrguer simples, mas delicioso, com carne grelhada, queijo cheddar, alface e tomate.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-7.png"),
+        thumbnail: require("@/assets/products/thumbnail-7.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne grelhada",
@@ -193,13 +192,13 @@ const MENU = [
         ],
       },
       {
-        id: "2",
+        id: "8",
         title: "Hambúrguer Duplo",
         price: 22.5,
         description:
           "Dois hambúrgueres suculentos com queijo americano, alface, tomate e molho especial.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-8.png"),
+        thumbnail: require("@/assets/products/thumbnail-8.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Dois hambúrgueres",
@@ -210,13 +209,13 @@ const MENU = [
         ],
       },
       {
-        id: "3",
+        id: "9",
         title: "Hambúrguer Bacon",
         price: 20.9,
         description:
           "Um hambúrguer com carne grelhada, queijo cheddar derretido, bacon crocante, alface e tomate.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-9.png"),
+        thumbnail: require("@/assets/products/thumbnail-9.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne grelhada",
@@ -227,13 +226,13 @@ const MENU = [
         ],
       },
       {
-        id: "4",
+        id: "10",
         title: "Hambúrguer BBQ",
         price: 21.9,
         description:
           "Um hambúrguer com carne grelhada, queijo cheddar, cebola caramelizada e molho barbecue.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-10.png"),
+        thumbnail: require("@/assets/products/thumbnail-10.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne grelhada",
@@ -243,13 +242,13 @@ const MENU = [
         ],
       },
       {
-        id: "5",
+        id: "11",
         title: "Hambúrguer Clássico",
         price: 19.5,
         description:
           "Um hambúrguer clássico com carne grelhada, queijo suíço, cogumelos salteados, alface e tomate.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-11.png"),
+        thumbnail: require("@/assets/products/thumbnail-11.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne grelhada",
@@ -260,13 +259,13 @@ const MENU = [
         ],
       },
       {
-        id: "6",
+        id: "12",
         title: "Hambúrguer Clássico com Ovo",
         price: 20.5,
         description:
           "Um hambúrguer com carne grelhada, queijo cheddar, ovo frito, alface e tomate.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-12.png"),
+        thumbnail: require("@/assets/products/thumbnail-12.png"),
         ingredientes: [
           "Pão de hambúrguer",
           "Carne grelhada",
@@ -282,13 +281,13 @@ const MENU = [
     title: "Sanduíches Especiais",
     data: [
       {
-        id: "1",
+        id: "13",
         title: "Sanduíche Especial de Frango",
         price: 24.5,
         description:
           "Um delicioso sanduíche com frango grelhado, queijo derretido, alface e tomate frescos.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-13.png"),
+        thumbnail: require("@/assets/products/thumbnail-13.png"),
         ingredientes: [
           "Pão de sanduíche",
           "Frango grelhado",
@@ -298,13 +297,13 @@ const MENU = [
         ],
       },
       {
-        id: "2",
+        id: "14",
         title: "Sanduíche Especial de Carne",
         price: 27.9,
         description:
           "Um sanduíche suculento com carne assada, queijo suíço, cogumelos, cebola caramelizada e molho especial.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-14.png"),
+        thumbnail: require("@/assets/products/thumbnail-14.png"),
         ingredientes: [
           "Pão de sanduíche",
           "Carne assada",
@@ -315,13 +314,13 @@ const MENU = [
         ],
       },
       {
-        id: "3",
+        id: "15",
         title: "Sanduíche Especial de Peixe",
         price: 22.9,
         description:
           "Um sanduíche leve e saboroso com filé de peixe grelhado, alface, tomate e molho tártaro.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-15.png"),
+        thumbnail: require("@/assets/products/thumbnail-15.png"),
         ingredientes: [
           "Pão de sanduíche",
           "Filé de peixe grelhado",
@@ -331,13 +330,13 @@ const MENU = [
         ],
       },
       {
-        id: "4",
+        id: "16",
         title: "Sanduíche Especial Vegano",
         price: 20.5,
         description:
           "Um sanduíche vegano delicioso com hambúrguer de grão de bico, abacate, rúcula e molho pesto.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-16.png"),
+        thumbnail: require("@/assets/products/thumbnail-16.png"),
         ingredientes: [
           "Pão de sanduíche vegano",
           "Hambúrguer de grão de bico",
@@ -347,13 +346,13 @@ const MENU = [
         ],
       },
       {
-        id: "5",
+        id: "17",
         title: "Sanduíche Especial Mediterrâneo",
         price: 25.9,
         description:
           "Um sanduíche com inspiração mediterrânea, recheado com presunto parma, queijo feta, azeitonas pretas e rúcula.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-17.png"),
+        thumbnail: require("@/assets/products/thumbnail-17.png"),
         ingredientes: [
           "Pão de sanduíche",
           "Presunto parma",
@@ -363,13 +362,13 @@ const MENU = [
         ],
       },
       {
-        id: "6",
+        id: "18",
         title: "Sanduíche Especial de Peru",
         price: 23.5,
         description:
           "Um sanduíche saudável com peito de peru defumado, queijo suíço, alface, tomate e maionese.",
-        cover: "", // Insira o link da imagem de capa aqui
-        thumbnail: "", // Insira o link da miniatura do produto aqui
+        cover: require("@/assets/products/cover-18.png"),
+        thumbnail: require("@/assets/products/thumbnail-18.png"),
         ingredientes: [
           "Pão de sanduíche",
           "Peito de peru defumado",

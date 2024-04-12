@@ -1,5 +1,4 @@
 import { Feather } from "@expo/vector-icons";
-import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import colors from "tailwindcss/colors";
 
@@ -14,7 +13,7 @@ export function Header({ title, cartQuantityItems = 0 }: HeaderProps) {
       <View className="flex-1">
         <Image source={require("@/assets/logo.png")} />
 
-        <Text className="text-slate-50 text-xl font-heading">{title}</Text>
+        <Text className="text-slate-50 text-xl font-semibold">{title}</Text>
       </View>
 
       {cartQuantityItems > 0 && (
