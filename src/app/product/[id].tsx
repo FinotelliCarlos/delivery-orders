@@ -4,7 +4,7 @@ import { useCartStore } from "@/stores/cart-store";
 import { PRODUCTS } from "@/utils/data/products";
 import { formatCurrency } from "@/utils/helpers/format-currency";
 import { Feather } from "@expo/vector-icons";
-import { useLocalSearchParams, useNavigation } from "expo-router";
+import { Redirect, useLocalSearchParams, useNavigation } from "expo-router";
 import React from "react";
 import { Image, Text, View } from "react-native";
 
@@ -16,8 +16,14 @@ export default function Product() {
   const product = PRODUCTS.find((item) => item.id === id);
 
   function handlencrementProductToCart() {
-    product && cartStore.add(product);
-    navigation.goBack();
+    if (product) {
+      cartStore.add(product);
+      navigation.goBack();
+    }
+  }
+
+  if (!product) {
+    return <Redirect href="/" />;
   }
 
   return (
@@ -25,18 +31,18 @@ export default function Product() {
       <Image source={product?.cover} className="w-full h-52" />
       <View className="p-5 mt-8 flex-1">
         <Text className="text-slate-200 text-xl font-semibold">
-          {product?.title}
+          {product.title}
         </Text>
 
         <Text className="text-lime-400 text-2xl font-semibold my-2">
-          {formatCurrency(product?.price as number)}
+          {formatCurrency(product.price as number)}
         </Text>
 
         <Text className="text-slate-400 text-base font-medium leading-6 mb-6">
-          {product?.description}
+          {product.description}
         </Text>
 
-        {product?.ingredientes.map((ingredient) => (
+        {product.ingredientes.map((ingredient) => (
           <Text
             className="text-slate-400 text-base font-medium leading-6"
             key={ingredient}
