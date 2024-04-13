@@ -3,11 +3,16 @@ import { FlatList, SectionList, StatusBar, Text, View } from "react-native";
 import { CategoryButton } from "@/components/category-button";
 import { Header } from "@/components/header";
 import { ProductItemList } from "@/components/product-item-list";
+import { useCartStore } from "@/stores/cart-store";
 import { CATEGORIES, MENU } from "@/utils/data/products";
 import { Link } from "expo-router";
 import { useRef, useState } from "react";
 
 export default function Home() {
+  const cartQuantityItems = useCartStore((state) =>
+    state.products.reduce((total, product) => total + product.quantity, 0)
+  );
+
   const [category, setCategory] = useState(CATEGORIES[0]);
 
   const sectionListRef = useRef<SectionList>(null);
@@ -31,7 +36,7 @@ export default function Home() {
   return (
     <View className="flex-1 pt-12">
       <StatusBar translucent barStyle={"light-content"} />
-      <Header title="Faça seu pedido" cartQuantityItems={12} />
+      <Header title="Faça seu pedido" cartQuantityItems={cartQuantityItems} />
 
       <FlatList
         data={CATEGORIES}
