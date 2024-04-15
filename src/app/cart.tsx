@@ -44,25 +44,29 @@ export default function Cart() {
   }
 
   function handleOrder() {
-    if (address.trim().length === 0) {
-      return Alert.alert("Pedido", "Informe os dados da entrega!");
-    } else {
-      const products = cartProductsList
-        .map((product) => `\n ${product.quantity}x ${product.title}`)
-        .join("");
+    if (cartProductsList.length >= 1) {
+      if (address.trim().length === 0) {
+        return Alert.alert("Pedido", "Informe os dados da entrega!");
+      } else {
+        const products = cartProductsList
+          .map((product) => `\n ${product.quantity}x ${product.title}`)
+          .join("");
 
-      const message = `
+        const message = `
       🍔 NOVO PEDIDO
       \n Engregar em: ${address}
       ${products}
       \n Valor total: ${total}
       `;
 
-      clearCartAction();
-      router.push("/success");
-      Linking.openURL(
-        `http://api.whatsapp.com/send?phone=${phone_number}&text=${message}`
-      );
+        clearCartAction();
+        router.push("/success");
+        Linking.openURL(
+          `http://api.whatsapp.com/send?phone=${phone_number}&text=${message}`
+        );
+      }
+    } else {
+      Alert.alert("Pedido", "Selecione produtos para seu carrinho!");
     }
   }
 
