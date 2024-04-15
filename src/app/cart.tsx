@@ -6,14 +6,19 @@ import { ProductItemList } from "@/components/product-item-list";
 import { ProductCartProps, useCartStore } from "@/stores/cart-store";
 import { formatCurrency } from "@/utils/helpers/format-currency";
 import { Feather } from "@expo/vector-icons";
+import { router } from "expo-router";
 import React, { useState } from "react";
-import { Alert, ScrollView, Text, View } from "react-native";
+import { Alert, Linking, ScrollView, Text, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+
+const phone_number = 5511972388905;
+// const phone_number = 5511958331748;
 
 export default function Cart() {
   const [address, setAddress] = useState<string>("");
   const cartProductsList = useCartStore((state) => state.products);
   const removeProductAction = useCartStore((state) => state.remove);
+  const clearCartAction = useCartStore((state) => state.clear);
 
   const total = formatCurrency(
     cartProductsList.reduce(
@@ -40,20 +45,25 @@ export default function Cart() {
 
   function handleOrder() {
     if (address.trim().length === 0) {
-      Alert.alert("Pedido", "Informe os dados da entrega!");
-    }
+      return Alert.alert("Pedido", "Informe os dados da entrega!");
+    } else {
+      const products = cartProductsList
+        .map((product) => `\n ${product.quantity}x ${product.title}`)
+        .join("");
 
-    const products = cartProductsList
-      .map((product) => `\n ${product.quantity}x ${product.title}`)
-      .join("");
-
-    const message = `
+      const message = `
       🍔 NOVO PEDIDO
       \n Engregar em: ${address}
       ${products}
       \n Valor total: ${total}
       `;
-    console.log(message);
+
+      clearCartAction();
+      router.push("/success");
+      Linking.openURL(
+        `http://api.whatsapp.com/send?phone=${phone_number}&text=${message}`
+      );
+    }
   }
 
   return (
