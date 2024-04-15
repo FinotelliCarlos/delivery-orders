@@ -59,15 +59,15 @@ export default function Home() {
         sections={MENU}
         keyExtractor={(item) => item.id}
         stickySectionHeadersEnabled={false}
-        renderItem={({ item }) => (
-          <Link href={`/product/${item.id}`} asChild>
-            <ProductItemList data={item} />
-          </Link>
-        )}
         renderSectionHeader={({ section: { title } }) => (
           <Text className="text-slate-200 text-xl font-semibold mt-8 mb-3">
             {title}
           </Text>
+        )}
+        renderItem={({ item }) => (
+          <Link href={`/product/${item.id}`} asChild>
+            <ProductItemList data={item} />
+          </Link>
         )}
         className="flex-1 p-5 pt-0 mt-5"
         showsVerticalScrollIndicator={false}
