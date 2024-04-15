@@ -9,7 +9,7 @@ export function Input({ ...props }: TextInputProps) {
       multiline
       textAlignVertical="top"
       placeholderTextColor={colors.slate[400]}
-      className="h-32 bg-slate-800 rounded-md px-4 py-3 font-medium"
+      className="h-32 bg-slate-800 rounded-md px-4 py-3 font-medium text-slate-200"
     />
   );
 }
