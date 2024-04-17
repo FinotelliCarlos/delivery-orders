@@ -98,7 +98,7 @@ export default function Cart() {
               <Text className="text-slate-200 text-xl font-semibold">
                 Total:
               </Text>
-              <Text className="text-lime-400 text-2xl font-semibold">
+              <Text className="text-indigo-400 text-2xl font-semibold">
                 {total}
               </Text>
             </View>

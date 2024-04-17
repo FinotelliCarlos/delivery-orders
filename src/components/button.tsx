@@ -16,7 +16,7 @@ interface ButtonIconProps {
 function Button({ children, ...props }: ButtonProps) {
   return (
     <TouchableOpacity
-      className="h-12 bg-lime-400 rounded-md items-center justify-center flex-row"
+      className="h-12 bg-indigo-400 rounded-md items-center justify-center flex-row"
       activeOpacity={0.7}
       {...props}
     >

@@ -34,7 +34,7 @@ export default function Product() {
           {product.title}
         </Text>
 
-        <Text className="text-lime-400 text-2xl font-semibold my-2">
+        <Text className="text-indigo-400 text-2xl font-semibold my-2">
           {formatCurrency(product.price as number)}
         </Text>
 
